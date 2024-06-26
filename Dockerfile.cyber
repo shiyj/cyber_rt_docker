@@ -1,0 +1,8 @@
+
+FROM cyber_rt_base
+
+ARG CYBER_RT_VERSION=9.0.0
+
+# build cyber rt library 
+COPY ubuntu-cyber.sh /app/
+RUN bash /app/ubuntu-cyber.sh ${CYBER_RT_VERSION} && rm /app/ubuntu-cyber.sh
